@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+}
+
+.hero-section {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('netflix.jpg');
+
+  background-size: cover;
+  background-position: center;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 70px;
+  padding-right: 90px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#header img {
+  width: 210px;
+  height: 90px;
+}
+#signInButton {
+  color: white;
+  background: rgb(222, 23, 2);
+  width: 97px;
+  height: 39px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 1s;
+}
+#signInButton:hover {
+  background: rgba(222, 23, 2, 0.63);
+}
+
+.intro-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  margin-top: 50px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.intro-div h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 40px;
+  }
+}
+#buttDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+#buttDiv #btt {
+  width: 160px;
+  height: 40px;
+  background: rgb(222, 23, 2);
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 8px;
+  cursor: pointer;
+  border: none;
+}
+#buttDiv input {
+  width: 350px;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 1px white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.intro-div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 4px;
+}
+
+.trending-section {
+  position: relative;
+  color: white;
+  background: transparent;
+}
+.curve {
+  height: 80px;
+  background: radial-gradient(
+    ellipse at center top,
+    #000104,
+    #18002d,
+    transparent
+  );
+  border-top: 4px solid #e50914;
+  border-radius: 100% 100% 0 0;
+}
+#movieSection {
+  display: flex;
+  overflow-x: auto;
+  overflow: hidden;
+  scrollbar-width: none;
+  gap: 10px;
+  width: 1000px;
+}
+#movieSection::-webkit-scrollbar {
+  display: none;
+}
+
+#movieCard {
+  flex: 0 0 calc((90% - 25px) / 4);
+}
+#movieCard img {
+  flex: 0 0 22%;
+  width: 90%;
+  height: 300px;
+  border-radius: 8px;
+}
+#galleryWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#backBtn,
+#nextBtn {
+  color: white;
+  margin: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#trending {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+#reasons {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+#fourCards {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+#fourCards div {
+  width: 500px;
+  height: 200px;
+  color: white;
+  border-radius: 9px;
+  padding: 20px;
+  background: linear-gradient(135deg, #18002d, #2a0c0d);
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 160px;
+  }
+}
+#fourCards div h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 10px;
+}
+#fourCards div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+#questionDiv {
+  margin-top: 40px;
+}
+#theParagraph {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  margin-left: 120px;
+}
+.FAQs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.FAQs span {
+  font-weight: 200;
+  font-size: 30px;
+}
+.FAQs div {
+  background: rgba(74, 72, 72, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  height: 80px;
+}
+.create-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.paragraphDiv {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.email {
+  padding: 10px;
+  width: 500px;
+  border-radius: 4px;
+  background: #151518;
+  border: solid 1px white;
+}
+.emailDiv {
+  margin-top: 10px;
+}
+.emailDiv button {
+  background: #e50914;
+  width: 130px;
+  height: 38px;
+  border-radius: 4px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  border: none;
+  margin-left: 6px;
+}
+.div {
+  color: white;
+}
+.space-between p {
+  margin: 15px;
+  text-decoration: underline;
+  color: white;
+}
+.space-between div {
+  width: 250px;
+}
+.space-between {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 700px;
+  margin: 20px;
+}
+.questions {
+  color: white;
+}
+.footer {
+  margin: 60px;
+}

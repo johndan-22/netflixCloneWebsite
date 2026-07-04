@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background: rgb(23,33,23);
+                width: 100%;
+                height: 100vh;
+            }
+            .gallery {
+                width: 900px;
+                display: flex;
+                overflow-x: scroll;
+               
+            }
+            
+            .gallery div {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                gap: 0;
+                flex: none;
+            }
+            
+            .gallery div img {
+                width: 100%;
+            }
+            span {
+                color: white;
+                margin: 15px;
+                font-size: 2rem;
+            }
+            .gallery-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10% auto;
+            }
+            
+
+         </style>
+    </head>
+
+
+    <body>
+         <div class="gallery-wrap">
+            <span id="nextBtn">
+                &#9664
+
+            </span>
+                <div class="gallery">
+            
+          <div>
+              
+               <span><img src="lady1.jpg" alt=""></span>
+               <span><img src="lady3.jpg" alt=""></span>
+               <span><img src="lady3.jpg" alt=""></span>
+          </div>
+          <div>
+        
+               <span><img src="lady1.jpg" alt=""></span>
+               <span><img src="lady3.jpeg" alt=""></span>
+               <span><img src="lady1.jpg" alt=""></span>
+
+          </div>
+                      
+        </div>
+
+            <span id="backBtn">
+                &#9654
+            </span>
+            
+         </div>
+               
+    
+           
+         
+        <script src="new.js"></script>
+
+    </body>
+</html>
